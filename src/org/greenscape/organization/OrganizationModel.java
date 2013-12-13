@@ -16,20 +16,20 @@ package org.greenscape.organization;
  * 
  */
 public interface OrganizationModel {
-	public static final String MODEL_NAME = "Organization";
-	public static final String ORGANIZATION_ID = "organizationId";
-	public static final String NAME = "name";
-	public static final String HOME_URL = "homeURL";
-	public static final String LOGO_ID = "logoId";
-	public static final String MAX_USERS = "maxUsers";
-	public static final String IS_ACTIVE = "isActive";
+	String MODEL_NAME = "Organization";
+	String ORGANIZATION_ID = "organizationId";
+	String NAME = "name";
+	String HOME_URL = "homeURL";
+	String LOGO_ID = "logoId";
+	String MAX_USERS = "maxUsers";
+	String IS_ACTIVE = "isActive";
 
 	/**
 	 * Returns the organization ID of this organization.
 	 * 
 	 * @return the organization ID of this organization
 	 */
-	public Long getOrganizationId();
+	Long getOrganizationId();
 
 	/**
 	 * Sets the organization ID of this organization.
@@ -38,14 +38,14 @@ public interface OrganizationModel {
 	 *            the organization ID of this organization
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setOrganizationId(Long organizationId);
+	OrganizationModel setOrganizationId(Long organizationId);
 
 	/**
 	 * Gets the name of this organization
 	 * 
 	 * @return the organization's name
 	 */
-	public String getName();
+	String getName();
 
 	/**
 	 * Sets the name of this organization
@@ -54,14 +54,14 @@ public interface OrganizationModel {
 	 *            the name to set
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setName(String name);
+	OrganizationModel setName(String name);
 
 	/**
 	 * Returns the home u r l of this organization.
 	 * 
 	 * @return the home u r l of this organization
 	 */
-	public String getHomeURL();
+	String getHomeURL();
 
 	/**
 	 * Sets the home u r l of this organization.
@@ -70,14 +70,14 @@ public interface OrganizationModel {
 	 *            the home u r l of this organization
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setHomeURL(String homeURL);
+	OrganizationModel setHomeURL(String homeURL);
 
 	/**
 	 * Returns the logo ID of this organization.
 	 * 
 	 * @return the logo ID of this organization
 	 */
-	public Long getLogoId();
+	Long getLogoId();
 
 	/**
 	 * Sets the logo ID of this organization.
@@ -86,14 +86,14 @@ public interface OrganizationModel {
 	 *            the logo ID of this organization
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setLogoId(Long logoId);
+	OrganizationModel setLogoId(Long logoId);
 
 	/**
 	 * Returns the max users of this organization.
 	 * 
 	 * @return the max users of this organization
 	 */
-	public Integer getMaxUsers();
+	Integer getMaxUsers();
 
 	/**
 	 * Sets the max users of this organization.
@@ -102,7 +102,7 @@ public interface OrganizationModel {
 	 *            the max users of this organization
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setMaxUsers(Integer maxUsers);
+	OrganizationModel setMaxUsers(Integer maxUsers);
 
 	/**
 	 * Returns <code>true</code> if this organization is active.
@@ -110,7 +110,7 @@ public interface OrganizationModel {
 	 * @return <code>true</code> if this organization is active;
 	 *         <code>false</code> otherwise
 	 */
-	public Boolean isActive();
+	Boolean isActive();
 
 	/**
 	 * Sets whether this organization is active.
@@ -119,5 +119,5 @@ public interface OrganizationModel {
 	 *            the active of this organization
 	 * @return this organization for fluent interface
 	 */
-	public OrganizationModel setActive(Boolean active);
+	OrganizationModel setActive(Boolean active);
 }
