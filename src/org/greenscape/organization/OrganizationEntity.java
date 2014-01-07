@@ -15,15 +15,15 @@ public class OrganizationEntity extends PersistedModelBase implements Organizati
 	public OrganizationEntity() {
 	}
 
-	public OrganizationEntity(OrganizationEntity model) {
-		setActive(model.isActive());
-		setHomeURL(model.getHomeURL());
-		setLogoId(model.getLogoId());
-		setMaxUsers(model.getMaxUsers());
-		setCreateDate(model.getCreateDate());
-		setModifiedDate(model.getModifiedDate());
-		setName(model.getName());
-		setOrganizationId(model.getOrganizationId());
+	public OrganizationEntity(OrganizationEntity entity) {
+		setActive(entity.isActive());
+		setHomeURL(entity.getHomeURL());
+		setLogoId(entity.getLogoId());
+		setMaxUsers(entity.getMaxUsers());
+		setCreateDate(entity.getCreateDate());
+		setModifiedDate(entity.getModifiedDate());
+		setName(entity.getName());
+		setOrganizationId(entity.getOrganizationId());
 	}
 
 	@Override
