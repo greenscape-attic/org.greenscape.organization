@@ -3,3 +3,4 @@ Export-Package: org.greenscape.organization
 -buildpath: org.greenscape.persistence;version=latest,\
 	junit.osgi
 -sources: false
+Test-Cases: org.greenscape.organization.OrganizationEntityTest
