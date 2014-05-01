@@ -3,6 +3,8 @@
  */
 package org.greenscape.organization;
 
+import org.greenscape.persistence.PersistedModel;
+
 /**
  * The base model interface for the Organization service. Represents a row in
  * the &quot;Organization&quot; database, with each column mapped to a property
@@ -15,30 +17,13 @@ package org.greenscape.organization;
  * @see org.greenscape.organization.OrganizationEntity.impl.OrganizationModelImpl
  * 
  */
-public interface OrganizationModel {
+public interface OrganizationModel extends PersistedModel {
 	String MODEL_NAME = "Organization";
-	String ORGANIZATION_ID = "organizationId";
 	String NAME = "name";
 	String HOME_URL = "homeURL";
 	String LOGO_ID = "logoId";
 	String MAX_USERS = "maxUsers";
-	String IS_ACTIVE = "isActive";
-
-	/**
-	 * Returns the organization ID of this organization.
-	 * 
-	 * @return the organization ID of this organization
-	 */
-	Long getOrganizationId();
-
-	/**
-	 * Sets the organization ID of this organization.
-	 * 
-	 * @param organizationId
-	 *            the organization ID of this organization
-	 * @return this organization for fluent interface
-	 */
-	OrganizationModel setOrganizationId(Long organizationId);
+	String ACTIVE = "active";
 
 	/**
 	 * Gets the name of this organization

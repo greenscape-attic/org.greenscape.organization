@@ -1,5 +1,6 @@
 Bundle-Version: 0.2.0
 Export-Package: org.greenscape.organization
+GS-Model: org.greenscape.organization.OrganizationEntity
 -buildpath: org.greenscape.persistence;version=latest,\
 	junit.osgi
 -sources: false

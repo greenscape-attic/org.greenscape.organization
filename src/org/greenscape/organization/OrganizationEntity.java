@@ -13,28 +13,16 @@ public class OrganizationEntity extends PersistedModelBase implements Organizati
 	private static final long serialVersionUID = -2392049292137025175L;
 
 	public OrganizationEntity() {
+		getPropertyNames().add(NAME);
+		getPropertyNames().add(HOME_URL);
+		getPropertyNames().add(LOGO_ID);
+		getPropertyNames().add(MAX_USERS);
+		getPropertyNames().add(ACTIVE);
 	}
 
 	public OrganizationEntity(OrganizationEntity entity) {
-		setActive(entity.isActive());
-		setHomeURL(entity.getHomeURL());
-		setLogoId(entity.getLogoId());
-		setMaxUsers(entity.getMaxUsers());
-		setCreateDate(entity.getCreateDate());
-		setModifiedDate(entity.getModifiedDate());
-		setName(entity.getName());
-		setOrganizationId(entity.getOrganizationId());
-	}
-
-	@Override
-	public Long getOrganizationId() {
-		return (Long) getProperty(ORGANIZATION_ID);
-	}
-
-	@Override
-	public OrganizationModel setOrganizationId(Long organisationId) {
-		setProperty(ORGANIZATION_ID, organisationId);
-		return this;
+		this();
+		getProperties().putAll(entity.getProperties());
 	}
 
 	@Override
@@ -83,12 +71,12 @@ public class OrganizationEntity extends PersistedModelBase implements Organizati
 
 	@Override
 	public Boolean isActive() {
-		return (Boolean) getProperty(IS_ACTIVE);
+		return (Boolean) getProperty(ACTIVE);
 	}
 
 	@Override
 	public OrganizationModel setActive(Boolean active) {
-		setProperty(IS_ACTIVE, active);
+		setProperty(ACTIVE, active);
 		return this;
 	}
 
