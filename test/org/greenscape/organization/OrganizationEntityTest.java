@@ -9,7 +9,7 @@ public class OrganizationEntityTest extends TestCase {
 	public void testCopyConstructor() {
 		OrganizationEntity entity1 = new OrganizationEntity();
 		entity1.setActive(true);
-		entity1.setCreateDate(new Date());
+		entity1.setCreatedDate(new Date());
 		entity1.setHomeURL("/Test");
 		entity1.setModelId("1");
 		entity1.setLogoId(1L);
@@ -19,9 +19,9 @@ public class OrganizationEntityTest extends TestCase {
 		OrganizationEntity entity2 = new OrganizationEntity(entity1);
 
 		assertEquals(true, entity2.isActive().booleanValue() == entity1.isActive().booleanValue());
-		assertEquals(true, entity2.getCreateDate().getTime() == entity1.getCreateDate().getTime());
+		assertEquals(true, entity2.getCreatedDate().getTime() == entity1.getCreatedDate().getTime());
 		assertEquals(true, entity2.getHomeURL().equals(entity1.getHomeURL()));
-		assertEquals(true, entity2.getModelId() == null);
+		assertEquals(true, entity2.getModelId().equals("1"));
 		assertEquals(true, entity2.getLogoId().intValue() == entity1.getLogoId().intValue());
 		assertEquals(true, entity2.getMaxUsers().intValue() == entity1.getMaxUsers().intValue());
 		assertEquals(true, entity2.getModifiedDate().getTime() == entity1.getModifiedDate().getTime());
@@ -32,7 +32,7 @@ public class OrganizationEntityTest extends TestCase {
 		OrganizationEntity entity = new OrganizationEntity();
 		entity.setActive(true);
 		Date now = new Date();
-		entity.setCreateDate(now);
+		entity.setCreatedDate(now);
 		entity.setHomeURL("/Test");
 		entity.setModelId("1");
 		entity.setLogoId(1L);
@@ -42,7 +42,7 @@ public class OrganizationEntityTest extends TestCase {
 
 		// test using property name
 		assertEquals(true, entity.isActive().booleanValue() == true);
-		assertEquals(true, entity.getCreateDate().getTime() == now.getTime());
+		assertEquals(true, entity.getCreatedDate().getTime() == now.getTime());
 		assertEquals(true, entity.getHomeURL().equals("/Test"));
 		assertEquals(true, entity.getModelId().equals("1"));
 		assertEquals(true, entity.getLogoId().intValue() == 1);
@@ -52,7 +52,7 @@ public class OrganizationEntityTest extends TestCase {
 
 		// test using generic getProperty method
 		assertEquals(true, ((Boolean) entity.getProperty(OrganizationEntity.ACTIVE)).booleanValue() == true);
-		assertEquals(true, ((Date) entity.getProperty(OrganizationEntity.CREATE_DATE)).getTime() == now.getTime());
+		assertEquals(true, ((Date) entity.getProperty(OrganizationEntity.CREATED_DATE)).getTime() == now.getTime());
 		assertEquals(true, entity.getProperty(OrganizationEntity.HOME_URL).equals("/Test"));
 		assertEquals(true, entity.getProperty(OrganizationEntity.MODEL_ID).equals("1"));
 		assertEquals(true, ((Long) entity.getProperty(OrganizationEntity.LOGO_ID)).intValue() == 1);

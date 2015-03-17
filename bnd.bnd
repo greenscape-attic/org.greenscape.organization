@@ -3,5 +3,5 @@ Export-Package: org.greenscape.organization
 GS-Model: org.greenscape.organization.OrganizationEntity
 -buildpath: org.greenscape.persistence;version=latest,\
 	junit.osgi
--sources: false
-Test-Cases: org.greenscape.organization.OrganizationEntityTest
+javac.source: 1.8
+javac.target: 1.8
